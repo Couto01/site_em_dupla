@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="loja de roupas techno-wear e alternativas. Marca de design. Coleções estacionais"
+    />
+    <title>ETHER</title>
+    <link rel="stylesheet" href="./style2.css" />
+    <script src="./loader.js"></script>
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="spin"></div>
+    </div>
+
+    <main class="hide">
+      <nav>
+        <div id="hamburguer">
+          <div class="linha"></div>
+          <div class="linha"></div>
+          <div class="linha"></div>
+        </div>
+        <ul id="menu">
+          <li>
+            <a href="#"> NOVIDADES</a>
+          </li>
+          <li>
+            <a href="#"> COLEÇÕES</a>
+          </li>
+          <li>
+            <a href="#"> MASCULINO</a>
+          </li>
+          <li>
+            <a href="#"> FEMENINO</a>
+          </li>
+          <li>
+            <a href="#"> ACESSÓRIOS</a>
+          </li>
+          <li>
+            <a href="#"> SOBRE A ETHER</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-heart"></i></a>
+
+            <a href="#"><i class="fa fa-user"></i></a>
+
+            <a href="#"><i class="fa fa-search"></i></a>
+
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container2">
+        <div class="top-bar">
+          <div class="header">
+            <div class="branding">
+              <h1 class="title">ETHER</h1>
+            </div>
+          </div>
+          <div class="top-bar2">
+            LANÇAMENTO: COLEÇÃO <span class="meso">MESO </span> OUTONO-INVERNO
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="container">
+          <div class="gallery">
+            <div class="image">
+              <img src="./images/imagem1.png" alt="Imagem 1" />
+              <div class="options">
+                <a href="#">Ver mais</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+              </div>
+            </div>
+            <div class="image">
+              <img src="./images/imagem2.png" alt="Imagem 2" />
+              <div class="options">
+                <a href="#">Ver mais</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="frete">
+        <h2>Calcule o frete</h2>
+        <p>Insira o CEP abaixo para calcular o frete:</p>
+        <form>
+          <input type="text" id="cep" name="cep" placeholder="Digite o CEP" />
+          <button type="button" onclick="calcularFrete()">Calcular</button>
+        </form>
+        <p id="valor-frete"></p>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>

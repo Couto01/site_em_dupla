@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@600&family=Karla&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+@font-face {
+  font-family: "EBENYA";
+  src: url("./fonts/EBENYA.ttf");
+}
+
+.top-bar {
+  background-color: white;
+  height: 205px;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.spin {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 16px solid #999;
+  border-top: 16px solid #616360c4;
+  animation: spin 3s ease-in-out infinite;
+}
+.hide {
+  display: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 11;
+}
+
+#hamburguer .linha {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #646464;
+  box-shadow: 0 0.2rem 0.2rem #000;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  right: -20rem;
+  background-color: #fff;
+  height: 100vh;
+  width: 20rem;
+  z-index: 10;
+  transition: right 1s;
+}
+#menu li {
+  list-style: none;
+}
+
+#menu a {
+  text-decoration: none;
+  font-family: Karla, sans-serif;
+  font-size: 20px;
+  color: black;
+  transition: all 0.2s ease;
+}
+
+#menu a:hover {
+  font-size: 24px;
+  color: white;
+  animation: crescerMudarCor 0.5s ease forwards running;
+}
+.menu-show {
+  right: 0;
+}
+
+.header {
+  background-color: white;
+  height: 140px;
+  width: 100%;
+  color: white;
+  font-family: Jura, sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: EBENYA;
+  font-size: 100px;
+  color: black;
+  text-shadow: 8px 0px #616360c4;
+  text-align: center;
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu {
+  font-family: Karla, sans-serif;
+  text-align: center;
+  position: relative;
+  top: 40px;
+  font-size: 17px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav.menu ul li a {
+  font-size: 20px;
+  color: black;
+  transition: all 0.2s ease;
+}
+
+nav.menu ul li a:hover {
+  font-size: 24px;
+  color: white;
+  animation: crescerMudarCor 0.5s ease forwards running;
+}
+
+@keyframes crescerMudarCor {
+  0% {
+    color: white;
+    font-size: 24px;
+  }
+  50% {
+    font-size: 28px;
+  }
+  100% {
+    color: #829f73;
+    font-size: 24px;
+  }
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 70px;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-bar2 {
+  background-color: #191e1e;
+  height: 150px;
+  width: 100%;
+  color: white;
+  padding: 30px;
+  font-family: Jura, sans-serif;
+  font-size: 35px;
+  text-align: center;
+  animation-name: fadeIn;
+}
+
+.meso {
+  font-family: EBENYA;
+  font-size: 70px;
+  color: #829f73;
+  text-shadow: 8px 0px #616360c4;
+  /*adicione mais shadows aqui*/
+  text-align: center;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.image img {
+  display: block;
+  max-width: 100%;
+  transition: transform 0.5s ease;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.overlay h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-color: #191e1e;
+  color: #fff;
+}
+
+.image:hover .overlay {
+  height: 100%;
+}
+
+.image:hover img {
+  transform: scale(1.2);
+  filter: blur(2px); /* adiciona blur na imagem */
+  position: relative;
+}
+
+.image:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* adiciona uma caixa de opções semi-transparente */
+  z-index: 1;
+}
+
+.image:hover .options {
+  display: flex; /* mostra a caixa de opções quando o mouse passa sobre a imagem */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.options {
+  display: none; /* oculta a caixa de opções por padrão */
+}
+
+.options a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #191e1e;
+  margin: 10px;
+  transition: all 0.2s ease;
+}
+
+.options a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.options a i {
+  font-size: 20px;
+  color: #fff;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.options a i:hover {
+  color: #000;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.footer {
+  background-color: #191e1e;
+  height: 150px;
+  width: 100%;
+  margin-top: 35px;
+  color: white;
+  padding: 30px;
+  font-family: Jura, sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  margin-right: 100px;
+}
+
+.icons a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #191e1e;
+  margin: 10px;
+  transition: all 0.2s ease;
+}
+
+.frete {
+  margin: 50px auto;
+  width: 500px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+form {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 1380px) {
+  .image:hover .options {
+    flex-direction: column;
+  }
+  .gallery {
+    flex-direction: column;
+  }
+}
